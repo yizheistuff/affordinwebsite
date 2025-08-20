@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affordin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #000;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px; /* match other pages */
+      font-weight: 500; /* match other pages */
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ff3131;
+    }
+
+    /* Hero banner */
+    .hero {
+      background-image: url('tinyhome.jpeg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      position: relative;
+      text-align: center;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.4);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3bb371;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #000;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Affordin</header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+    <a href="reviews.html">Reviews</a>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Welcome to Affordin Tinyhomes!</h1>
+      <p><em><strong>Comfort, Sustainable Future.</strong></em></p>
+      <p>Your one stop platform for affordable tinyhome rooms and services!</p>
+      <a href="bookaroom.html" class="button">Book A Room!</a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Affordin, Yizhe Su. All Rights Reserved. Do Not Copy.
+  </footer>
+
+</body>
+</html>

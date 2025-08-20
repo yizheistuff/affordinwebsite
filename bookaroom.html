@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Affordin Booking</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    iframe {
+      width: 100%;
+      height: 1200px;
+      border: none;
+    }
+    label, select, button {
+      display: block;
+      margin: 20px auto;
+      font-size: 16px;
+    }
+    select {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #3bb371;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2e9c5f;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Book Your Room</h2>
+    <p><strong>Step 1:</strong> Fill out the form below.</p>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScGtUOjju5VEXihUdAM6gsMA6WQVs0zQ3q7Q9aYXeIfAZbMhA/viewform?embedded=true">Loading…</iframe>
+
+    <p><strong>Step 2:</strong> Select your room type to proceed to payment.</p>
+    <label for="room-select">Choose a room:</label>
+    <select id="room-select">
+      <option value="">--Select--</option>
+      <option value="50">Standard Room - $50</option>
+      <option value="100">Deluxe Room - $100</option>
+      <option value="150">Suite - $150</option>
+    </select>
+
+    <button id="proceed-btn">Proceed to Payment</button>
+  </div>
+
+  <script>
+    document.getElementById('proceed-btn').addEventListener('click', () => {
+      const price = document.getElementById('room-select').value;
+      if (!price) {
+        alert("Please select a room before proceeding.");
+        return;
+      }
+      window.location.href = `payment.html?price=${price}`;
+    });
+  </script>
+
+</body>
+</html>
